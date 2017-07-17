@@ -37,6 +37,14 @@ namespace Octokit
         IIssuesClient Issue { get; }
 
         /// <summary>
+        /// Access GitHub's Import Issue API.
+        /// </summary>
+        /// <remarks>
+        /// Refer to the API documentation for more information: https://gist.github.com/jonmagic/5282384165e0f86ef105
+        /// </remarks>
+        IIssuesImportClient IssueImport { get; }
+
+        /// <summary>
         /// Access GitHub's Migration API.
         /// </summary>
         /// <remarks>

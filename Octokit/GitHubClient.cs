@@ -88,6 +88,7 @@ namespace Octokit
             Gist = new GistsClient(apiConnection);
             Git = new GitDatabaseClient(apiConnection);
             Issue = new IssuesClient(apiConnection);
+            IssueImport = new IssuesImportClient(apiConnection);
             Migration = new MigrationClient(apiConnection);
             Miscellaneous = new MiscellaneousClient(connection);
             Oauth = new OauthClient(connection);
@@ -165,6 +166,8 @@ namespace Octokit
         /// Refer to the API documentation for more information: https://developer.github.com/v3/issues/
         /// </remarks>
         public IIssuesClient Issue { get; private set; }
+
+        public IIssuesImportClient IssueImport { get; private set; }
 
         /// <summary>
         /// Access GitHub's Migration API.

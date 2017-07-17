@@ -44,5 +44,7 @@ namespace Octokit
         public const string RepositoryTrafficApiPreview = "application/vnd.github.spiderman-preview";
 
         public const string PullRequestReviewsApiPreview = "application/vnd.github.black-cat-preview+json";
+
+        public const string ImportIssuesApiPreview = "application/vnd.github.golden-comet-preview+json";
     }
 }

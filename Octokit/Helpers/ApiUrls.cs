@@ -294,6 +294,21 @@ namespace Octokit
         }
 
         /// <summary>
+        /// Returns the <see cref="Uri"/> that imports issues to GitHub.
+        /// </summary>
+        /// <param name="owner">The owner of the repository</param>
+        /// <param name="name">The name of the repository</param>
+        /// <returns></returns>
+        public static Uri ImportIssues(string owner, string name)
+        {
+            return "repos/{0}/{1}/import/issues".FormatUri(owner, name);
+        }
+        public static Uri ImportIssues(long repositoryId)
+        {
+            return "repositories/{0}/import/issues".FormatUri(repositoryId);
+        }
+
+        /// <summary>
         /// Returns the <see cref="Uri"/> that returns all of the issues  across all the authenticated user’s visible
         /// repositories including owned repositories, member repositories, and organization repositories:
         /// </summary>
